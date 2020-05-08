@@ -49,6 +49,10 @@ const UserSchema = mongoose.Schema({
         default: mongoose.Types.ObjectId(),
         ref:'Cart'
     },
+    wishList:[{
+        type: mongoose.Schema.Types.ObjectId,
+        ref:'Product'
+    }],
     tokens:[{
         token:{
             type: String,

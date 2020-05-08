@@ -1,7 +1,6 @@
 {
   "name": "e-commece",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
@@ -21,5 +20,14 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WagdySamih/Shoppig-Cart-API.git"
+  },
+  "bugs": {
+    "url": "https://github.com/WagdySamih/Shoppig-Cart-API/issues"
+  },
+  "homepage": "https://github.com/WagdySamih/Shoppig-Cart-API#readme",
+  "description": ""
 }
