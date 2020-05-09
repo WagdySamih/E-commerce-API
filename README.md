@@ -35,7 +35,6 @@ orders can be sorted due to time created in ascending or descending order, also 
     Email verification and confirmation email.
     Add a payment method.
     Add search method for products.
-    Report issues.
     Add a wishes list for users.
     Add testing.
     
