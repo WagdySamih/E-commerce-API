@@ -1,5 +1,5 @@
 # Shopping-Cart-API
-   a simple shopping cart API with all its basic features.
+   a simple shopping cart API with all its basic features with PayPal payment method.
 
 
 ## Guest Role:
@@ -33,7 +33,6 @@ orders can be sorted due to time created in ascending or descending order, also 
 
 ### Future Work:
     Email verification and confirmation email.
-    Add a payment method.
     Add search method for products.
     Add a wishes list for users.
     Add testing.
