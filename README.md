@@ -10,6 +10,7 @@
 ## User Role:
 *    Guest Role.
 *    View a profile, edit it, and logout.
+*    Add,remove product from his wish list, Show all products in his wish list 
 *    Create a cart and get its info.
 *    add products, edit existing and delete them from the cart.
 *    checkout the cart.
@@ -34,6 +35,5 @@ orders can be sorted due to time created in ascending or descending order, also 
 ### Future Work:
     Email verification and confirmation email.
     Add search method for products.
-    Add a wishes list for users.
     Add testing.
     
