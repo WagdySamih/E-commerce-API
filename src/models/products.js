@@ -23,6 +23,10 @@ const productSchema = mongoose.Schema({
         type: String,
         enum:['Yes','Limited','No'],
         default:'Yes'
+    },
+    averageRating: {
+        type: Number,
+        default: 5
     }
 }, {
     timestamps: true

@@ -21,10 +21,6 @@ router.get('/create',AuthRole('USER'), async function(req, res){
     const cart = await Cart.findById(req.user.cart)
     await cart.populate('products.product').execPopulate()
     await cart.populate('owner').execPopulate()
-
-    console.log(cart)
-
-
     /**     create a payment request file with all order data   */
     let payReq = {
         'intent':'sale',
@@ -53,12 +49,10 @@ router.get('/create',AuthRole('USER'), async function(req, res){
             name: product.product.name,
             price: product.product.price,
             currency: "USD",
-      //      sku: "001",
             quantity: product.quantity
         }
         payReq.transactions[0].item_list.items.push(item)
     })
-
     payReq = JSON.stringify(payReq)
 
 
@@ -102,11 +96,10 @@ router.get('/process', function(req, res){
     var payerId = { 'payer_id': req.query.PayerID };
     /**    this function to excute the payment process after submitting the form */
     paypal.payment.execute(paymentId, payerId, function(error, payment){
-        console.log(payment)
         if(error){
             console.error(error);
         } else if (payment.state == 'approved'){ 
-                res.send('payment completed successfully');
+            res.send('payment completed successfully');
         } else {
             res.send('payment failed');
         }

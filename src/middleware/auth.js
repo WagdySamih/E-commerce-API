@@ -15,8 +15,7 @@ const AuthRole = (Role) => {
             if(Role != user.role && 'ADMIN'!=user.role){
                 res.status(403).send()
             }
-
-        
+ 
             req.token = token
             req.user  = user
             next()
