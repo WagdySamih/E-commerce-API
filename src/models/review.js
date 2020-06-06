@@ -28,14 +28,15 @@ const reviewSchema = mongoose.Schema({
 }, {
     timestamps: true
 })
-/// calculate average rating per bootcamp
+/// calculate average rating per product
 reviewSchema.statics.CalcAverageRating = async function (productId){
     try{
         const reviews = await this.model('Review').find({ product: productId })
         let sum = 0;
+       
         reviews.forEach( (review) => sum += review.stars )
-        const averageRating =  Math.ceil(sum / (reviews.length))
-
+        const averageRating =  (sum / (reviews.length))
+        
         await this.model('Product').findByIdAndUpdate(productId, { averageRating },{
             new: true
         })
@@ -45,11 +46,12 @@ reviewSchema.statics.CalcAverageRating = async function (productId){
 }
 
 reviewSchema.post('save', async function(next){
-    await this.constructor.CalcAverageRating(this.bootcamp)
+ 
+    await this.constructor.CalcAverageRating(this.product)
 })
 
 reviewSchema.post('remove', async function(next){
-     await this.constructor.CalcAverageRating(this.bootcamp)
+    await this.constructor.CalcAverageRating(this.product)
 })
 
 const Review = mongoose.model('Review', reviewSchema)

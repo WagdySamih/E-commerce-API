@@ -30,7 +30,7 @@ const AuthRole = require('../middleware/auth')
         ...req.body
     })
      try{
-        const product = await Product.findById(product)
+        const product = await Product.findById(req.params.productId)
         if(!product){
             res.status(404).send()
         }
