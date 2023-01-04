@@ -1,7 +1,6 @@
-# Shopping-Cart-API
+# E-commerce API
    a simple shopping cart API with all its basic features with PayPal payment method.
     
-[Documntaion Link](https://documenter.getpostman.com/view/11503824/SztK2QPK?version=latest)
 
 ## Guest Role:
 *    can create a new account or log in an existing one.
