@@ -1,5 +1,5 @@
 # E-commerce API
-   a simple shopping cart API with all its basic features with PayPal payment method.
+   a full E-commerce API with all its basic features with PayPal payment method.
     
 
 ## Guest Role:
